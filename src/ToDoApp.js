@@ -9,7 +9,7 @@ const TodoApp = () => {
   const [todos, setTodos] = useState([]);
 
   const addTodo = (todo) => {
-    setTodos([...todos, todo]);
+    setTodos([todo, ...todos]);
   };
 
   const removeTodo = (index) => {
@@ -18,8 +18,8 @@ const TodoApp = () => {
   };
 
   return (
-    <div className="todo-app">
-      <h1>Todo List</h1>
+    <div className="container mt-5">
+      <h1 className="text-center">Todo List</h1>
       <TodoForm addTodo={addTodo} />
       <TodoList todos={todos} removeTodo={removeTodo} />
     </div>

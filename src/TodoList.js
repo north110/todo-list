@@ -5,7 +5,7 @@ import TodoItem from './TodoItem';
 
 const TodoList = ({ todos, removeTodo }) => {
   return (
-    <div>
+    <div className="list-group">
       {todos.map((todo, index) => (
         <TodoItem key={index} todo={todo} index={index} removeTodo={removeTodo} />
       ))}
